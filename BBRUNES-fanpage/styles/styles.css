@@ -1,0 +1,101 @@
+/* card member */
+.card {
+    margin: 10px 10px;
+  }
+  
+  input[type='checkbox'] {
+    display: none;
+  }
+  
+  /* Flip Cards CSS */
+  .card-container {
+    display: grid;
+    perspective: 700px;
+  }
+  
+  .card-flip {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    grid-template-areas: "frontAndBack";
+    transform-style: preserve-3d;
+    transition: all 0.7s ease;
+  }
+  
+  .card-flip div {
+    -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+  
+  .front {
+    grid-area: frontAndBack;
+  }
+  
+  .back {
+    grid-area: frontAndBack;
+    transform: rotateY(-180deg);
+  }
+  
+  input[type='checkbox']:checked + .card-container .card-flip {
+    transform: rotateY(180deg);
+  }
+
+.wrapper {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 5px;
+}
+
+.details-box {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 40px;
+  align-items: left;
+  margin-right: 20px;
+}
+
+@keyframes upAndDown {
+  0% {
+      transform: translateY(3px);
+  }
+  100% {
+      transform: translateY(-3px);
+  }
+}
+
+#details {
+  align-items: center;
+  line-height: 1.6;
+  font-weight: bold;
+  text-align: justify;
+  margin: 5px;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+#details1 {
+  align-items: center;
+  line-height: 1.6;
+  font-weight: bold;
+  text-align: justify;
+  margin: 5px;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+#details2 {
+  align-items: center;
+  line-height: 1.6;
+  font-weight: bold;
+  text-align: justify;
+  margin: 5px;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+}
